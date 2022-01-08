@@ -1,0 +1,288 @@
+.loader-wrapper{
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+
+}
+.loader{
+  background-color: green;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  margin: 1vw;
+  animation: mymove 1s linear infinite;
+}
+@keyframes mymove {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-150px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.loader:nth-child(1){
+  background-color: #4285F4;
+  animation-delay: 0.2s;
+}
+.loader:nth-child(2){
+  background-color: #DB4437;
+  animation-delay: 0.6s;
+}
+.loader:nth-child(3){
+  background-color: #F4B400;
+  animation-delay: 0.4s;
+}
+.loader:nth-child(4){
+  background-color: #0F9D58;
+  animation-delay: 0.8s;
+}
+body{
+  text-align: center;
+  background-color: #7E370C;
+  color: #F7F7F7;
+}
+body::after {
+  content: "";
+  background: url("http://cdn.wallpapername.com/1680x1050/20121112/artwork%20tic%20tac%20toe%201680x1050%20wallpaper_www.wallpapername.com_69.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+.heading{
+  padding: 1vw;
+  font-family: 'Bungee', cursive;
+  text-shadow: 5px 5px 8px  #7E370C;
+}
+.scores{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0.5vw;
+}
+.scoreCount{
+  margin: 10px 40px;
+  padding: 10px;
+  font-size: 1rem;
+  color: white;
+}
+.board{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #C3B091;
+  border-radius: 10%;;
+  margin: 0 auto;
+  text-align: center;
+  width: 45vh;
+  height: 45vh;
+}
+.box{
+  border: 1px solid black;
+}
+.box:nth-child(3n+1){
+  border: 1px solid black;
+  border-left: none;
+}
+.box:nth-child(3n+2){
+  border: 1px solid black;
+}
+.box:nth-child(3n){
+  border: 1px solid black;
+  border-right: none;
+}
+.box:first-child,.box:nth-child(2),.box:nth-child(3){
+  border-top: none;
+}
+.box:nth-child(7),.box:nth-child(8),.box:last-child{
+  border-bottom: none;
+}
+.box:first-child{
+  border-top-left-radius: 28%;
+}
+.box:nth-child(3){
+  border-top-right-radius: 28%;
+}
+.box:nth-child(7){
+  border-bottom-left-radius: 28%;
+}
+.box:last-child{
+  border-bottom-right-radius: 28%;
+}
+
+.box:hover{
+  background-color: #28a745;
+  background-color: #7E370C;
+}
+.disabled{
+  pointer-events: none;
+}
+
+.X{
+  background-image: url("../src/images/close.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.O{
+  background-image: url("../src/images/rec.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.heading{
+  font-size: 4vw;
+}
+.rounds{
+  font-size: 2.5vw;
+  display: inline-block;
+  background-color: #7E370C;
+  padding: 0vw 7vw;
+  font-family: 'Cinzel', serif;
+}
+.scoreCount{
+  font-size: 1vw;
+  font-family: 'Cinzel', serif;
+}
+.fullContainer{
+  margin: 1%;
+  padding: 2%;
+  /* position: relative;
+  top: 10vh; */
+}
+.topContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modalheading{
+  font-family: 'Pacifico', cursive;
+  text-shadow: 5px 5px 8px  #7E370C;
+}
+.modal-content{
+  background-color: inherit;
+  border: none;
+}
+.modal-footer{
+  justify-content: center;
+  border-top: none;
+}
+@media screen and (max-width: 425px) {
+  body {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .board{
+    width: 35vh;
+    height: 40vh;
+  }
+  .fullContainer{
+    /* position: relative;
+    top: 10vh; */
+    margin: auto;
+  }
+  .heading{
+    font-size: 15vw;
+  }
+  .rounds{
+    font-size: 5vw;
+  }
+  .scoreCount{
+    font-size: 3vw;
+  }
+}
+@media screen and (min-width:426px) and (max-width:768px) {
+  .board{
+    width: 40vh;
+    height: 40vh;
+  }
+  .fullContainer{
+    position: relative;
+    top: 3vh;
+  }
+  .heading{
+    font-size: 8vw;
+  }
+  .rounds{
+    font-size: 6.5vw;
+  }
+  .scoreCount{
+    font-size: 2vw;
+  }
+}
+@media screen and (min-width:769px) and (max-width:1000px) {
+  .board{
+    width: 40vh;
+    height: 40vh;
+  }
+  /* .fullContainer{
+    position: relative;
+    top: 15vh;
+  } */
+  .heading{
+    font-size: 6vw;
+  }
+  .rounds{
+    font-size: 4.5vw;
+  }
+  .scoreCount{
+    font-size: 2vw;
+  }
+}
+.btn-brown{
+  background-color: #7E370C;
+}
+.bottomrestart{
+  background-color: #7E370C;
+  border-color: white;
+  color: white;
+}
+.restartbtn{
+  background-color: #7E370C;
+  border-color: white;
+  color: white;
+}
+.bottomrestart{
+  position: relative;
+  top: 2vh;
+  display: none;
+}
+.mainmodal{
+  text-align: justify;
+  background-color: #7E370C;
+  color: #F7F7F7;
+  border-radius: 30px;
+  margin: 2vw;
+  font-family: 'Patua One', cursive;
+}
+.content{
+  padding: 1vw;
+}
+.mainmodal h3, .enter{
+  background-color: #292b2c;
+  text-align: center;
+  border-radius: 30px;
+  padding: 1vw;
+  font-family: 'Bungee', cursive;
+}
