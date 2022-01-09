@@ -270,10 +270,10 @@ body::after {
 }
 .mainmodal{
   text-align: justify;
-  background-color: #7E370C;
-  color: #F7F7F7;
+  background-color: white;
+  color: #AB6B51;
   border-radius: 30px;
-  margin: 2vw;
+  margin: 1vw;
   font-family: 'Patua One', cursive;
 }
 .content{
@@ -281,8 +281,15 @@ body::after {
 }
 .mainmodal h3, .enter{
   background-color: #292b2c;
+  color: white;
   text-align: center;
   border-radius: 30px;
   padding: 1vw;
-  font-family: 'Bungee', cursive;
+  font-family: 'Bungee', cursive
+}
+.mainmodalbody{
+  padding-bottom: 0px;
+}
+.mainmodalfooter{
+  padding-top: 0px;
 }
