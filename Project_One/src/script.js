@@ -118,7 +118,7 @@ function roundCompleted(currentClass) {
   // console.log(crossCount,circleCount);
   if (crossCount === 2 || circleCount === 2) {
     console.log(currentClass + " wins");
-    currentstatus = currentClass + " Wins!"
+    currentstatus = "Player " + currentClass + " Wins!"
     restartGame(currentstatus)
   }
   // else if (circleCount === 2) {
