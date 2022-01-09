@@ -79,7 +79,7 @@ function checkforWin(cell,currentClass) {
       allBoxes[item[0]].style.backgroundColor = "#7E370C";
       allBoxes[item[1]].style.backgroundColor = "#7E370C";
       allBoxes[item[2]].style.backgroundColor = "#7E370C";
-      // document.querySelectorAll('.modalheading')[0].innerText = currentClass + " Wins! ";
+      document.querySelectorAll('.modalheading')[0].innerText = crossCount + " - " + circleCount;
       roundCompleted(currentClass);
     }
   });
@@ -91,7 +91,7 @@ function checkforDraw(cell,currentClass) {
   if (count === 9) {
     // console.log("draw");
     drawCount = drawCount + 1;
-    // document.querySelectorAll('.modalheading')[0].innerText = "It's a Draw!";
+    document.querySelectorAll('.modalheading')[0].innerText = crossCount + " - " + circleCount;
     roundCompleted(currentClass);
   }
 
@@ -110,6 +110,7 @@ function roundCompleted(currentClass) {
     item.removeEventListener('click', handleclick);
     item.classList.add('disabled')
   });
+  $('#exampleModalCenter').modal();
   document.querySelectorAll('.board')[0].style.opacity = 0.5;
   document.querySelectorAll('.bottomrestart')[0].style.display = "inline-block";
   document.querySelectorAll('.bottomrestart')[0].style.opacity = 1;
