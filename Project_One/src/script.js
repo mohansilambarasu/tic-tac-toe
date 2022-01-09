@@ -134,7 +134,7 @@ function roundCompleted(currentClass) {
     else {
       var winner_atlast = (crossCount > circleCount) ? "X" : "O";
       console.log(winner_atlast);
-      currentstatus = winner_atlast + " Wins!"
+      currentstatus = "Player " + winner_atlast + " Wins!"
       restartGame(currentstatus)
     }
   }
