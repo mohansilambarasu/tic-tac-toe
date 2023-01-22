@@ -31,7 +31,7 @@ allBoxes.forEach(item => {
 });
 //main fuction containing all inner functions which needs to be executed while the cell has been clicked
 function handleclick(e) {
-  document.querySelectorAll('.bottomrestart')[0].style.display = "none";
+  document.querySelectorAll('.bottomrestart')[0].style.visibility = "hidden";
   cell = e.target;
   const currentClass = circleTurn ? circle_class : cross_class;
   //function to add cross / circle to the cell which has been clicked
@@ -76,9 +76,9 @@ function checkforWin(cell,currentClass) {
       }
       // Adding colors to the matching cells
       // console.log(currentClass + " Wins!");
-      allBoxes[item[0]].style.backgroundColor = "#7E370C";
-      allBoxes[item[1]].style.backgroundColor = "#7E370C";
-      allBoxes[item[2]].style.backgroundColor = "#7E370C";
+      allBoxes[item[0]].style.backgroundColor = "#0c2431";
+      allBoxes[item[1]].style.backgroundColor = "#0c2431";
+      allBoxes[item[2]].style.backgroundColor = "#0c2431";
       document.querySelectorAll('.modalheading')[0].innerText = crossCount + " - " + circleCount;
       roundCompleted(currentClass);
     }
@@ -105,14 +105,14 @@ function roundCompleted(currentClass) {
     swapturns(currentClass)
   }
   // document.querySelectorAll('.restartbtn')[0].style.visibility = 'visible';
-  document.querySelectorAll('.restartbtn')[0].innerText = "Next Round!"
+  document.querySelectorAll('.restartbtn')[0].innerText = "NEXT ROUND"
   allBoxes.forEach(item => {
     item.removeEventListener('click', handleclick);
     item.classList.add('disabled')
   });
   $('#exampleModalCenter').modal();
   document.querySelectorAll('.board')[0].style.opacity = 0.5;
-  document.querySelectorAll('.bottomrestart')[0].style.display = "inline-block";
+  document.querySelectorAll('.bottomrestart')[0].style.visibility = "visible";
   document.querySelectorAll('.bottomrestart')[0].style.opacity = 1;
   // console.log(roundCount,typeof($('.one')[0].innerText),typeof($('.two')[0].innerText)); parseInt
   // console.log(crossCount,circleCount);
@@ -168,7 +168,7 @@ function resetfun() {
 
   });
   document.querySelectorAll('.zero')[0].innerText = roundCount;
-  document.querySelectorAll('.bottomrestart')[0].style.display = "none";
+  document.querySelectorAll('.bottomrestart')[0].style.visibility = "hidden";
   document.querySelectorAll('.board')[0].style.opacity = 1;
   $('.scoreCount')[0].classList.add('btn-brown')
   $('.scoreCount')[1].classList.remove('btn-brown')
