@@ -22,10 +22,6 @@
       <div class="topContainer">
         <h1 class="heading">Tic Tac Toe!</h1>
         <h3 class="rounds">Round <span class="zero">1</span></h3>
-        <div class="scores">
-          <h5 class="scoreCount btn btn-dark">Player X - <span class="one">0</span></h5>
-          <h5 class="scoreCount btn btn-dark">Player O - <span class="two">0</span></h5>
-        </div>
       </div>
       <div class="middleContainer">
         <div class="grid-container board">
@@ -39,19 +35,25 @@
           <div class="grid-item box"></div>
           <div class="grid-item box"></div>
         </div>
-        <button type="button" class="btn btn-dark bottomrestart" data-dismiss="modal">Next Round!</button>
+        <div class="scores">
+          <h5 class="scoreCount"><span class="one">0</span></h5>
+          <h5>:</h5>
+          <h5 class="scoreCount"><span class="two">0</span></h5>
+        </div>
+        <button type="button" class="btn bottomrestart" data-dismiss="modal">NEXT ROUND</button>
         <!-- <button class="restartbtn" type="button" name="button">Restart</button> -->
         <!-- onclick="window.location.reload();" -->
         <!-- Modal -->
         <div class="modals">
           <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
+              <div class="modal-content secondarymodal">
                 <div class="modal-body">
-                  <h1 class="modalheading">Hello</h1>
+                  <h3>SCORE CARD</h3>
+                  <h1 class="modalheading secondarymodalheading">Hello</h1>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-dark restartbtn" data-dismiss="modal">Next Round!</button>
+                  <button type="button" class="btn restartbtn" data-dismiss="modal">NEXT ROUND</button>
                 </div>
               </div>
             </div>
@@ -66,9 +68,7 @@
               <div class="modal-body mainmodalbody">
                 <h3>WELCOME TO <br> TIC TAC TOE</h3>
                 <div class="content">      
-                  <h5>Presenting to you the digital version of the most played game on the backside of every note book.</h5>
-                  <h5>Best of three rounds will determine the winner.</h5>
-                  <h5>So what are you waiting for, pull your best friend and Start playing!</h5>
+                  <h5>Best of 3 Rounds !</h5>
                 </div>
               </div>
               <div class="modal-footer mainmodalfooter">
